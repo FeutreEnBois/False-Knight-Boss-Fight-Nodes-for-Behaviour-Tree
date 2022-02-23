@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 1a131f73756d0fa45ae8435cd793658e
-  position: {x: 0.000032234195, y: 260.05}
+  position: {x: -204.63373, y: 265.247}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
@@ -45,6 +45,27 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   child: {fileID: 1237342757399353916}
+--- !u!114 &-5461422884676367770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ebdcccb4ad766419e80b97b3db5296, type: 3}
+  m_Name: SetTrigger
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7d51398a1a842144688448ae92ab5ba0
+  position: {x: 850, y: 378}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  animationTriggerName: Attack
 --- !u!114 &-5313123231486616348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,7 +81,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a71d954f8e544bd4fb40962fb48bec9a
-  position: {x: 288, y: 421}
+  position: {x: 83.36623, y: 426.247}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
@@ -87,12 +108,62 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 65c4867cd44a79347b619e41a608cc9a
-  position: {x: -75, y: 421}
+  position: {x: -279.63373, y: 426.247}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
   drawGizmos: 0
-  duration: 1
+  duration: 0.82
+--- !u!114 &-2368387828127367018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6254c24fe4318a84392842621653f065, type: 3}
+  m_Name: SpawnFallingRocks
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e3cff2d1ae3deee49a674641d42fe35a
+  position: {x: 1301, y: 378}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  spawnRocksArea: {fileID: 4151291372278275774, guid: 9249785a43fe59046a4280ac6ac75e15, type: 3}
+  rockPrefab: {fileID: 7909142325675445989, guid: db638f234a89356479e4272d056e6bec, type: 3}
+  spawnCount: 4
+  spawnInterval: 0.3
+--- !u!114 &-1969335693390792320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1443929237dba9542a4910d596489a0b, type: 3}
+  m_Name: ShootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c7642c20a9ad7ac41858a8280c97a331
+  position: {x: 1150, y: 378}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  weapons:
+  - weaponTransform: {fileID: 4660482346805607376, guid: 42b87abda1cdafe4f8a6a99f04aa34d7, type: 3}
+    projectilePrefab: {fileID: 3296611222167287979, guid: 2a7fc7e36c4aa7a43902c5288e97ac96, type: 3}
+    horizontalForce: 1
+    verticalForce: 0
+  shakeCamera: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,8 +185,38 @@ MonoBehaviour:
   - {fileID: -5313123231486616348}
   - {fileID: -3195800156834571652}
   - {fileID: 7911712569260065338}
+  - {fileID: 5007983250376757181}
+  - {fileID: -1969335693390792320}
+  - {fileID: -2368387828127367018}
+  - {fileID: 1865538052307733054}
+  - {fileID: 2209947681834157631}
+  - {fileID: 7400454849746899571}
+  - {fileID: -5461422884676367770}
+  - {fileID: 29147530103656512}
+  - {fileID: 2636414206098853640}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &29147530103656512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c295b744088222e4895c94d7eb167050
+  position: {x: 1000, y: 378}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 1
+  duration: 0.1
 --- !u!114 &1237342757399353916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,9 +237,121 @@ MonoBehaviour:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
   drawGizmos: 1
-  child: {fileID: -8722241878243781510}
+  child: {fileID: 5007983250376757181}
   restartOnSuccess: 1
   restartOnFailure: 1
+--- !u!114 &1865538052307733054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ebdcccb4ad766419e80b97b3db5296, type: 3}
+  m_Name: SetTrigger
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b8d123e03d270ee4d9d8e64a77e7a252
+  position: {x: 552.4702, y: 378.25888}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  animationTriggerName: StartAttack
+--- !u!114 &2209947681834157631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4705b9aa9d88fbe4db571812d477d1c2, type: 3}
+  m_Name: FacePlayerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0a1ef6fc533afe0439eaf99412b22fb0
+  position: {x: 402, y: 378}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+--- !u!114 &2636414206098853640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 88653694a3e87fc47ba69a8ee7db1366
+  position: {x: 1451, y: 378.0001}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 1
+  duration: 1
+--- !u!114 &5007983250376757181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8a4a21ce7b56ba943ad4a9527d23b942
+  position: {x: 655.4702, y: 244.25891}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 1
+  children:
+  - {fileID: 2209947681834157631}
+  - {fileID: 1865538052307733054}
+  - {fileID: 7400454849746899571}
+  - {fileID: -5461422884676367770}
+  - {fileID: 29147530103656512}
+  - {fileID: -1969335693390792320}
+  - {fileID: -2368387828127367018}
+  - {fileID: 2636414206098853640}
+--- !u!114 &7400454849746899571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d5271178fd212cc4aaa3ddfb6d051d4c
+  position: {x: 700.2509, y: 378}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 1
+  duration: 1.2
 --- !u!114 &7911712569260065338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +367,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f1ef9cbdee5361c469815fc2e89e6e12
-  position: {x: 105, y: 421}
+  position: {x: -99.63368, y: 426.247}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
