@@ -7,7 +7,6 @@ using DG.Tweening;
 
 public class SpawnFallingRocks : ActionNode
 {
-    public BoxCollider2D spawnRocksArea;
     public AbstractProjectile rockPrefab;
     public int spawnCount = 4;
     public float spawnInterval = 0.3f;
@@ -19,7 +18,7 @@ public class SpawnFallingRocks : ActionNode
     }
 
     protected override State OnUpdate() {
-
+        Debug.Log(context.spawnRocksArea.bounds.min.x + " " + context.spawnRocksArea.bounds.max.x);
         var sequence = DOTween.Sequence();
         for (int i = 0; i < spawnCount; i++)
         {
@@ -32,9 +31,9 @@ public class SpawnFallingRocks : ActionNode
 
     private void SpawnRock()
     {
-        var randomX = Random.Range(spawnRocksArea.bounds.min.x, spawnRocksArea.bounds.max.x);
+        var randomX = Random.Range(context.spawnRocksArea.bounds.min.x, context.spawnRocksArea.bounds.max.x);
         var rock = Object.Instantiate(rockPrefab, new Vector3(randomX,
-            spawnRocksArea.bounds.min.y), Quaternion.identity);
+            context.spawnRocksArea.bounds.min.y), Quaternion.identity);
         rock.SetForce(Vector2.zero);
     }
 }
